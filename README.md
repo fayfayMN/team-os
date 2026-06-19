@@ -1,5 +1,7 @@
 # 🧭 Team OS
 
+**👉 Open the app: https://fayfaymn-team-os-app-ttgvcb.streamlit.app/**
+
 A **lightweight team collaboration system** — for startups, small businesses, and
 school clubs that are running without structure. It makes explicit the four things
 that quietly break teams:
