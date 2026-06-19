@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+teamos_state.json
+.streamlit/secrets.toml
+.venv/
