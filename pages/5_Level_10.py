@@ -18,11 +18,13 @@ from datetime import date
 
 import streamlit as st
 
+from teamos.gate import require_access
 from teamos.models import Decision, Issue
 from teamos.store import init_state, save
 
 st.set_page_config(page_title="Level 10 · Team OS", page_icon="🔟", layout="wide")
 init_state(st)
+require_access()
 
 st.title("🔟 Level 10 Meeting")
 st.caption("The EOS weekly rhythm. Same time, same agenda, every week. The heart "

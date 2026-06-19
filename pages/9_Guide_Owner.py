@@ -2,8 +2,10 @@
 
 from pathlib import Path
 import streamlit as st
+from teamos.gate import require_access
 
 st.set_page_config(page_title="Owner Guide · Team OS", page_icon="📖", layout="wide")
+require_access()
 
 st.title("📖 Owner / Admin Guide")
 st.caption("How to set up and run Team OS for your team.")

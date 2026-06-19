@@ -3,11 +3,13 @@ rules, not just tasks. This is the document you point back to when things drift.
 
 import streamlit as st
 
+from teamos.gate import require_access
 from teamos.models import Member
 from teamos.store import init_state, save
 
 st.set_page_config(page_title="Charter · Team OS", page_icon="📜", layout="wide")
 init_state(st)
+require_access()
 
 st.title("📜 Team Charter")
 st.caption("The shared contract. Agreeing this up front is your defense against "

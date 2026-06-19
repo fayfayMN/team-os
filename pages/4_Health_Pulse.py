@@ -7,6 +7,7 @@ explainable, one move at a time."""
 
 import streamlit as st
 
+from teamos.gate import require_access
 from teamos import health
 from teamos import raci as raci_check
 from teamos.models import PulseResponse
@@ -14,6 +15,7 @@ from teamos.store import init_state, save
 
 st.set_page_config(page_title="Health Pulse · Team OS", page_icon="❤️‍🩹", layout="wide")
 init_state(st)
+require_access()
 
 st.title("❤️‍🩹 Health Pulse + Coach")
 st.caption("An anonymous read on how the team actually feels — then one concrete "

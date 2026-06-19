@@ -6,11 +6,13 @@ what stops "we never agreed to that" arguments and quiet revisionism."""
 
 import streamlit as st
 
+from teamos.gate import require_access
 from teamos.models import Decision
 from teamos.store import init_state, save
 
 st.set_page_config(page_title="Decision Log · Team OS", page_icon="🗳️", layout="wide")
 init_state(st)
+require_access()
 
 st.title("🗳️ Decision Log")
 st.caption("Capture decisions the moment they're made — what, who decided, and why. "

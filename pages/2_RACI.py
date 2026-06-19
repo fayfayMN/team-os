@@ -5,12 +5,14 @@ Consulted (input before) / Informed (told after)."""
 
 import streamlit as st
 
+from teamos.gate import require_access
 from teamos.models import RACI_CODES, Workstream
 from teamos import raci as raci_check
 from teamos.store import init_state, save
 
 st.set_page_config(page_title="RACI · Team OS", page_icon="🧩", layout="wide")
 init_state(st)
+require_access()
 
 st.title("🧩 RACI — who decides, who does")
 st.caption("Ambiguity about ownership is the #1 driver of free-riders and burnt-out "

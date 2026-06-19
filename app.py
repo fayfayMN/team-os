@@ -11,10 +11,12 @@ Run locally:
 
 import streamlit as st
 
+from teamos.gate import require_access
 from teamos.store import init_state, load_demo, save
 
 st.set_page_config(page_title="Team OS", page_icon="🧭", layout="wide")
 init_state(st)
+require_access()
 
 st.title("🧭 Team OS")
 st.caption("Run a healthy collaborative team — startup, small business, or club. "

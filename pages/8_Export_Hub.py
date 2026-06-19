@@ -7,12 +7,14 @@ generates ready-to-use exports — no API keys needed. Copy, paste, done.
 
 import streamlit as st
 
+from teamos.gate import require_access
 from teamos import export, health
 from teamos import raci as raci_check
 from teamos.store import init_state
 
 st.set_page_config(page_title="Export Hub · Team OS", page_icon="📤", layout="wide")
 init_state(st)
+require_access()
 
 st.title("📤 Export Hub")
 st.caption("Take your team's structure wherever it needs to go — Google Sheets, "

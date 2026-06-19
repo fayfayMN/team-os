@@ -7,11 +7,13 @@ the IDS discussion at the Level 10 so the team can help unblock it.
 
 import streamlit as st
 
+from teamos.gate import require_access
 from teamos.models import Rock
 from teamos.store import init_state, save
 
 st.set_page_config(page_title="Rocks · Team OS", page_icon="🪨", layout="wide")
 init_state(st)
+require_access()
 
 st.title("🪨 Quarterly Rocks")
 st.caption("3–7 priorities for the quarter. One owner each, binary (done / not done). "
